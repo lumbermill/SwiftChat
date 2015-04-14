@@ -9,6 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController,UITableViewDataSource {
+    let URL = "http://chat.lmlab.net/chats.json"
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -57,7 +58,6 @@ class FirstViewController: UIViewController,UITableViewDataSource {
     func reloadChats(){
         self.data = NSMutableArray()
         
-        let URL = "http://chat.lmlab.net/chats.json"
         let url: NSURL? = NSURL(string: URL)
         if url == nil {
             NSLog("Invalid constant. %@", URL)
@@ -103,10 +103,30 @@ class FirstViewController: UIViewController,UITableViewDataSource {
         textField.resignFirstResponder()
         let name = nameLabel.text
         let text = textField.text
-        if !text.isEmpty {
-            // TODO: Send text
+        if text.isEmpty {
+            reloadChats()
+        }else{
+            // Send text
+            let url: NSURL? = NSURL(string: URL)
+            if url == nil {
+                NSLog("Invalid constant. %@", URL)
+                return;
+            }
+            let body = "chat[user]=\(name!)&chat[message]=\(text)"
+            NSLog(body)
+            let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "POST"
+            request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            //request.setValue(request.HTTPBody?.length,forHTTPHeaderField: "Content-Length")
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler: {
+                (resp:NSURLResponse?, data:NSData?, e1:NSError?) -> Void in
+                
+                var s:NSString? = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                NSLog("%@",s!)
+                self.reloadChats()
+            });
         }
-        reloadChats()
     }
 }
 
