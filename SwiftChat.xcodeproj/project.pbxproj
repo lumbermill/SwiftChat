@@ -14,7 +14,6 @@
 		13A1AB471AD9DD5600176F68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A1AB461AD9DD5600176F68 /* Images.xcassets */; };
 		13A1AB4A1AD9DD5600176F68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A1AB481AD9DD5600176F68 /* LaunchScreen.xib */; };
 		13A1AB561AD9DD5600176F68 /* SwiftChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1AB551AD9DD5600176F68 /* SwiftChatTests.swift */; };
-		13A1AB601AD9EE6300176F68 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1AB5F1AD9EE6300176F68 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		13A1AB4F1AD9DD5600176F68 /* SwiftChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A1AB541AD9DD5600176F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A1AB551AD9DD5600176F68 /* SwiftChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChatTests.swift; sourceTree = "<group>"; };
-		13A1AB5F1AD9EE6300176F68 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 				13A1AB461AD9DD5600176F68 /* Images.xcassets */,
 				13A1AB481AD9DD5600176F68 /* LaunchScreen.xib */,
 				13A1AB3B1AD9DD5600176F68 /* Supporting Files */,
-				13A1AB5F1AD9EE6300176F68 /* TableViewController.swift */,
 			);
 			path = SwiftChat;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				13A1AB421AD9DD5600176F68 /* SecondViewController.swift in Sources */,
 				13A1AB3E1AD9DD5600176F68 /* AppDelegate.swift in Sources */,
 				13A1AB401AD9DD5600176F68 /* FirstViewController.swift in Sources */,
-				13A1AB601AD9EE6300176F68 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +411,7 @@
 				13A1AB5B1AD9DD5600176F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A1AB5C1AD9DD5600176F68 /* Build configuration list for PBXNativeTarget "SwiftChatTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +420,7 @@
 				13A1AB5E1AD9DD5600176F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
